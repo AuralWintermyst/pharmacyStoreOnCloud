@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "Payment";
+    Layout = "~/Views/Shared/_PatientLayout.cshtml";
+    int Payment = (int)ViewBag.payment;
+}
+
+<h2>Payment</h2>
+
+<form>
+    <h1>Total Bill: @Payment</h1>
+    <div>
+        <a asp-action="Index">Back to Home</a>
+    </div>
+</form>

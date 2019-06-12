@@ -1,0 +1,55 @@
+﻿@model DDAC.Models.Drugs
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_PatientLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Drugs</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.drugname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.drugname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.imageURL)
+        </dt>
+        <dd>
+            <img src="@Html.DisplayFor(model => model.imageURL)" width="100" height="100">
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.stock)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.stock)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Order", "BuyItem", new { id = Model.Id }) |
+    <a asp-action="DrugList">Back to List</a>
+</div>
